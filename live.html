@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafeBlock Live Command Center</title>
+<style>
+  body {
+    background: #0a0a0a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  h1 {
+    color: #ff3333;
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+  .subtitle {
+    color: #aaa;
+    margin-bottom: 30px;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+  .stat-box {
+    background: #1a1a1a;
+    border: 2px solid #ff3333;
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .stat-num {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff3333;
+  }
+  .stat-label {
+    color: #ccc;
+    font-size: 0.9rem;
+  }
+  .feed {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+  }
+  .feed h2 {
+    color: #ff3333;
+    margin-top: 0;
+  }
+  .alert {
+    padding: 10px 0;
+    border-bottom: 1px solid #222;
+    font-size: 0.95rem;
+  }
+  .footer {
+    margin-top: 30px;
+    color: #777;
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<h1>SAFEBLOCK LIVE COMMAND CENTER</h1>
+<p class="subtitle">Real-time community safety, powered by you</p>
+
+<div class="stats">
+  <div class="stat-box">
+    <div class="stat-num">247</div>
+    <div class="stat-label">Active Users Today</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-num">20</div>
+    <div class="stat-label">SOS Alerts Resolved</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-num" id="responseTime">42</div>
+    <div class="stat-label">Avg Response Time (sec)</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-num">1</div>
+    <div class="stat-label">Communities Protected</div>
+  </div>
+</div>
+
+<div class="feed">
+  <h2>LIVE INCIDENT FEED</h2>
+  <div class="alert">14:32 - Medical alert resolved - Zone 6 ✅</div>
+  <div class="alert">14:28 - Crime alert - Zone 14 🚨 Responders notified</div>
+  <div class="alert">14:15 - Fire alert resolved - Zone 3 ✅</div>
+  <div class="alert">14:05 - Medical alert - Zone 7 ⏳ Help on route</div>
+</div>
+
+<p class="footer">Every alert. Every life. Visible 24/7.<br>
+Raising funding to scale this to 5 Kasi by Dec 2026</p>
+
+<script>
+// Makes response time "tick" so it looks live
+setInterval(() => {
+  let rt = document.getElementById('responseTime');
+  let num = 38 + Math.floor(Math.random() * 8);
+  rt.textContent = num;
+}, 10000);
+</script>
+
+</body>
+</html>
